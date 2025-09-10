@@ -46,7 +46,7 @@ h1 {
 
 .menu {
   position: fixed;
-  top: 120px;
+  top: 110px;
   min-height: 200px;
   margin-left: 3%;
   width: 400px;
@@ -57,7 +57,7 @@ h1 {
 }
 .content {
   position: relative;
-  margin-top: 0px;
+  margin-top: 10vh;
   margin-right:3%;
   width: max-content;
   text-align: left;
