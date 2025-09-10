@@ -6,10 +6,6 @@ a {
     text-decoration: none;
     color: #e84509; }
 
-.works img:hover{
-	opacity:0.5;
-	transition:0.3s;
-}
 h1 {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -63,6 +59,13 @@ h1 {
   text-align: left;
   line-height:30px;
   grid-column: 2;
+}
+.works {
+	height: 400px;
+}
+.works img:hover{
+	opacity:0.5;
+	transition:0.3s;
 }
 
 body {
