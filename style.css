@@ -35,34 +35,34 @@ h1 {
 .logo {
   position: sticky;
   top: 0px;
-  padding: 40px;
+  padding: 4%;
 }
 .multi_column {
-  display: flex;
+  display: grid;
   justify-content: left;
   margin-top: 0px;
-　align-items: flex-start;
+  grid-template-columns: 1fr 3.5fr; /* 左固定幅 + 右可変幅 */
 }
+
 .menu {
-  position: sticky;
-  top: 0px;
-  flex: 1;
+  position: fixed;
+  top: 120px;
   min-height: 200px;
-  margin-left: 40px;
-  width: min-content;
+  margin-left: 4%;
+  width: 400px;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 200;
   line-height:40px;
-　align-self: flex-start;
+  grid-column: 1;
 }
 .content {
-  flex: 4;
   position: relative;
   margin-top: 0px;
-  margin-right:40px;
+  margin-right:4%;
   width: max-content;
   text-align: left;
   line-height:30px;
+  grid-column: 2;
 }
 
 body {
