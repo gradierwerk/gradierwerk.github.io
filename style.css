@@ -31,38 +31,38 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
+/* 本文コンテナ */
 .honbun {
-  width: 100%;
+    margin-left: 220px; /* メニューの幅分ずらす */
+    height: 100vh;      /* 全画面高さ */
+    overflow-y: auto;   /* 縦スクロールを本文だけに適用 */
 }
-.logo {
-  position: sticky;
-  top: 0px;
-  padding: 40px;
-}
+
 .multi_column {
-  display: flex;
-  justify-content: left;
-  margin-top: 0px;
+    display: flex;
+    justify-content: left;
+    margin-top: 0;
 }
+
+/* メニューを画面左に固定 */
 .menu {
-  position: sticky;
-  top: 0px;
-  flex: 1;
-  min-height: 200px;
-  margin-left: 40px;
-  width: min-content;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 200;
-  line-height:40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* 固定幅 */
+    height: 100vh;
+    overflow-y: auto; /* メニュー自体が長いときはスクロール可能 */
+    padding: 20px;
+    background: #fff; /* 背景色を指定しないと本文に重なる */
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 200;
+    line-height: 40px;
 }
+
+/* 本文部分 */
 .content {
-  flex: 4;
-  position: relative;
-  margin-top: 0px;
-  margin-right:40px;
-  width: max-content;
-  text-align: left;
-  line-height:30px;
+    margin: 20px;
+    line-height: 30px;
 }
 
 body {
@@ -72,6 +72,5 @@ body {
     font-weight: 400;
     font-optical-sizing: auto;
     font-style: normal;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
