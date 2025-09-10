@@ -6,6 +6,12 @@ a {
     text-decoration: none;
     color: #e84509;
 }
+h2 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 
 
 .noto-sans-jp-<Noto> {
