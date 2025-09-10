@@ -26,7 +26,6 @@ h1 {
   font-style: normal;
 }
 .honbun {
-  position: absolute;
   width: 100%;
 }
 .logo {
@@ -40,7 +39,7 @@ h1 {
   margin-top: 0px;
 }
 .menu {
-  position: fixed;
+  position: sticky;
   top: 0px;
   flex: 1;
   min-height: 200px;
