@@ -33,7 +33,7 @@ h1 {
 }
 /* 本文コンテナ */
 .honbun {
-    margin-left: 220px; /* メニューの幅分ずらす */
+    margin-left: 20vw; /* メニューの幅分ずらす */
     height: 100vh;      /* 全画面高さ */
     overflow-y: auto;   /* 縦スクロールを本文だけに適用 */
 }
@@ -49,7 +49,7 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; /* 固定幅 */
+    width: 20vw; /* 固定幅 */
     height: 100vh;
     overflow-y: auto; /* メニュー自体が長いときはスクロール可能 */
     padding: 20px;
