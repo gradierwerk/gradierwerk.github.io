@@ -41,6 +41,7 @@ h1 {
   display: flex;
   justify-content: left;
   margin-top: 0px;
+　align-items: flex-start;
 }
 .menu {
   position: sticky;
