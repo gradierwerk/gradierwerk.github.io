@@ -35,20 +35,20 @@ h1 {
 .logo {
   position: sticky;
   top: 0px;
-  padding: 4%;
+  padding: 3%;
 }
 .multi_column {
   display: grid;
   justify-content: left;
   margin-top: 0px;
-  grid-template-columns: 1fr 3.5fr; /* 左固定幅 + 右可変幅 */
+  grid-template-columns: 1fr 3.75fr; /* 左固定幅 + 右可変幅 */
 }
 
 .menu {
   position: fixed;
   top: 120px;
   min-height: 200px;
-  margin-left: 4%;
+  margin-left: 3%;
   width: 400px;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 200;
@@ -58,7 +58,7 @@ h1 {
 .content {
   position: relative;
   margin-top: 0px;
-  margin-right:4%;
+  margin-right:3%;
   width: max-content;
   text-align: left;
   line-height:30px;
