@@ -4,10 +4,9 @@
 }
 a {
     text-decoration: none;
-    color: #e84509;
-    background:#e84509; }
+    color: #e84509; }
 
-a img:hover{
+.works img:hover{
 	opacity:0.5;
 	transition:0.3s;
 }
@@ -47,7 +46,7 @@ h1 {
 /* メニューを画面左に固定 */
 .menu {
     position: fixed;
-    top: 0;
+    top: 120px;
     left: 0;
     width: 20vw; /* 固定幅 */
     height: 100vh;
