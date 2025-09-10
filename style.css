@@ -33,7 +33,7 @@ h1 {
   width: 100%;
 }
 .logo {
-  position: sticky;
+  position: fixed;
   top: 0px;
   padding: 3%;
 }
