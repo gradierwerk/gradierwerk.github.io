@@ -5,6 +5,12 @@
 a {
     text-decoration: none;
     color: #e84509;
+    background:#e84509; }
+
+a img:hover{
+	opacity:0.5;
+	transition:0.3s;
+}
 }
 h1 {
     font-family: "Noto Sans JP", sans-serif;
