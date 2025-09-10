@@ -37,7 +37,7 @@ h1 {
 .multi_column {
   display: flex;
   justify-content: left;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .menu {
   position: sticky;
