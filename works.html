@@ -1,78 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="同人サークル「Gradierwerk」公式サイト">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="works | Gradierwerk" />
+  <meta name="twitter:image" content="https://gradierwerd.github.io/GWicon.jpg" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+  <meta name="keywords" content="Gradierwerk, gradierwerk, 戦略級魔法少女合同, 環境SF合同">
+  <title>Gradierwerk</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+</head>
 
-:root {
-    --text-color: #e84509;
-    --back-color: #ddd;
-}
-a {
-    text-decoration: none;
-    color: #e84509; }
 
-.works img:hover{
-	opacity:0.5;
-	transition:0.3s;
-}
-h1 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
+<body>
+  <main>
+    <div class="honbun">
+      <div class="logo">
+        <a href="index.html"><img src="GWiconorange.png" alt="icon" width="70"/></a>
+      </div>
+      <div class="multi_column">
+        <nav class="menu">
+          <a href="profile.html">about us</a><br>
+          <a href="works.html">works</a><br>
+          <a href="links.html">links</a><br>
+        </nav>
+        <div class="content">
+          <h1>works</h1><br>
+          <div class="works">
+            <a href="sunspot.html"><img src="sunspot1.png" alt="戦略級魔法少女合同 黒点" width="300"/></a>
+            <div class="works_caption">
+              戦略級魔法少女合同 黒点<br>
+              ほげほげ<br>
+              hogehoge
+            </div>
+          </div>
+          <div class="works">
+            <a href="tropopause.html"><img src="tropopause1.jpg" alt="環境SF合同 圏界面" width="300"/></a>
+            <div class="works_caption">
+              環境SF合同 圏界面<br>
+            </div>
+          </div>
+          <div class="works">
+            <a href="archipelago_city.html"><img src="archipelago_city1.png" alt="多島海 都市SF" width="300"/></a>
+            <div class="works_caption">
+              多島海 特集:都市SF<br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-.noto-sans-jp-<Noto> {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-.shippori-mincho-b1-regular {
-  font-family: "Shippori Mincho B1", serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.honbun {
-  width: 100%;
-}
-.logo {
-  position: fixed;
-  top: 0px;
-  padding: 3%;
-}
-.multi_column {
-  display: grid;
-  justify-content: left;
-  margin-top: 0px;
-  grid-template-columns: 1fr 3.75fr; /* 左固定幅 + 右可変幅 */
-}
+    </div>
+  </main>
+</body>
+</html>
 
-.menu {
-  position: fixed;
-  top: 110px;
-  min-height: 200px;
-  margin-left: 3%;
-  width: 400px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 200;
-  line-height:40px;
-  grid-column: 1;
-}
-.content {
-  position: relative;
-  margin-top: 10vh;
-  margin-right:3%;
-  width: max-content;
-  text-align: left;
-  line-height:30px;
-  grid-column: 2;
-}
-
-body {
-    color: var(--text-color);
-    background-color: var(--back-color);
-    font-family: "Shippori Mincho B1", serif;
-    font-weight: 400;
-    font-optical-sizing: auto;
-    font-style: normal;
-    width: 100%;
-    margin: 0 auto;
-}
