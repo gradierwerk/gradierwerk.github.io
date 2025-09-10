@@ -30,25 +30,25 @@ h1 {
 }
 .logo {
   position: fixed;
-  top: 0px;
+  top: 0;
   padding: 3%;
 }
 .multi_column {
   display: grid;
   justify-content: left;
-  margin-top: 0px;
+  margin-top: 0;
   grid-template-columns: 1fr 3.75fr; /* 左固定幅 + 右可変幅 */
 }
 
 .menu {
   position: fixed;
-  top: 110px;
-  min-height: 200px;
+  top: 12%;
+  min-height: 20%;
   margin-left: 3%;
-  width: 400px;
+  width: 40%;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 200;
-  line-height:40px;
+  line-height:3%;
   grid-column: 1;
 }
 .content {
@@ -57,7 +57,7 @@ h1 {
   margin-right:3%;
   width: max-content;
   text-align: left;
-  line-height:30px;
+  line-height:3%;
   grid-column: 2;
 }
 .works img:hover{
