@@ -30,6 +30,8 @@ h1 {
   width: 100%;
 }
 .logo {
+  position: sticky;
+  top: 0px;
   padding: 40px;
 }
 .multi_column {
@@ -39,6 +41,7 @@ h1 {
 }
 .menu {
   position: sticky;
+  top: 0px;
   flex: 1;
   min-height: 200px;
   margin-left: 40px;
