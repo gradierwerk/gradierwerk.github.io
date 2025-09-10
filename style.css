@@ -38,6 +38,7 @@ h1 {
   margin-top: 20px;
 }
 .menu {
+  position: sticky;
   flex: 1;
   min-height: 200px;
   margin-left: 40px;
