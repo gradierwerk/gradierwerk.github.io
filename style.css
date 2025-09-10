@@ -39,7 +39,6 @@ h1 {
 }
 .menu {
   flex: 1;
-  position: sticky;
   min-height: 200px;
   margin-left: 40px;
   width: min-content;
