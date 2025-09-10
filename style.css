@@ -60,9 +60,6 @@ h1 {
   line-height:30px;
   grid-column: 2;
 }
-.works {
-	height: 400px;
-}
 .works img:hover{
 	opacity:0.5;
 	transition:0.3s;
