@@ -45,7 +45,7 @@ h1 {
   top: 12%;
   min-height: 20%;
   margin-left: 3%;
-  width: 40%;
+  width: 25%;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 200;
   line-height:40px;
@@ -54,8 +54,7 @@ h1 {
 .content {
   position: relative;
   margin-top: 10vh;
-  margin-right:3%;
-  width: max-content;
+  width: 75%;
   text-align: left;
   line-height:30px;
   grid-column: 2;
