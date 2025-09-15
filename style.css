@@ -15,7 +15,7 @@ h1 {
     font-style: normal;
 }
 
-map {
+background-map {
 	pointer-events: none;
 	z-index: 0;
 	opacity:0.3;
