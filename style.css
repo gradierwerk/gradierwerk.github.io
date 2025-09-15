@@ -2,9 +2,11 @@
     --text-color: #e84509;
     --back-color: #ddd;
 }
+
 a {
     text-decoration: none;
-    color: #e84509; }
+    color: #e84509;
+}
 
 h1 {
     font-family: "Noto Sans JP", sans-serif;
@@ -16,6 +18,23 @@ h1 {
 map {
 	pointer-events: none;
 	z-index: 1;
+	opacity:0.3;
+}
+
+linkimage:hover{
+	opacity:0.5;
+	transition:0.3s;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--back-color);
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .noto-sans-jp-<Noto> {
@@ -24,6 +43,7 @@ map {
   font-weight: 500;
   font-style: normal;
 }
+
 .shippori-mincho-b1-regular {
   font-family: "Shippori Mincho B1", serif;
   font-weight: 400;
@@ -34,11 +54,13 @@ map {
   width: 100%;
   z-index: 2;
 }
+
 .logo {
   position: fixed;
   top: 0;
   padding: 3%;
 }
+
 .multi_column {
   display: grid;
   justify-content: left;
@@ -57,6 +79,7 @@ map {
   line-height:40px;
   grid-column: 1;
 }
+
 .content {
   position: relative;
   margin-top: 10vh;
@@ -64,19 +87,4 @@ map {
   text-align: left;
   line-height:30px;
   grid-column: 2;
-}
-.works img:hover{
-	opacity:0.5;
-	transition:0.3s;
-}
-
-body {
-    color: var(--text-color);
-    background-color: var(--back-color);
-    font-family: "Shippori Mincho B1", serif;
-    font-weight: 400;
-    font-optical-sizing: auto;
-    font-style: normal;
-    width: 100%;
-    margin: 0 auto;
 }
