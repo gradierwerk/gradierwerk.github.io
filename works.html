@@ -20,10 +20,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
 </head>
 
 
 <body>
+
+  <div id="map" class="background-map" style="width: 100vw; 
+	pointer-events: none;
+	z-index: -1;
+	opacity:0.1;
+	position:absolute;">
+  </div>
+
   <main>
     <div class="honbun">
       <div class="logo">
@@ -60,10 +69,11 @@
         </div>
       </div>
     </div>
-
-
-    </div>
   </main>
+
+  <!-- 地図表示 -->
+  <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
 
