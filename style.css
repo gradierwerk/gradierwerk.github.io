@@ -15,6 +15,7 @@ h1 {
 
 map {
 	pointer-events: none;
+	z-index: -1;
 }
 
 .noto-sans-jp-<Noto> {
