@@ -32,6 +32,7 @@ map {
 
 .honbun {
   width: 100%;
+  z-index: 2;
 }
 .logo {
   position: fixed;
