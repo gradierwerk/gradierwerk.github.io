@@ -19,6 +19,7 @@ background-map {
 	pointer-events: none;
 	z-index: -1;
 	opacity:0.3;
+	position:absolute;
 }
 
 linkimage:hover{
