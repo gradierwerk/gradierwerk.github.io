@@ -17,7 +17,7 @@ h1 {
 
 background-map {
 	pointer-events: none;
-	z-index: 0;
+	z-index: -1;
 	opacity:0.3;
 }
 
@@ -52,7 +52,6 @@ body {
 
 .honbun {
   width: 100%;
-  z-index: 2;
 }
 
 .logo {
