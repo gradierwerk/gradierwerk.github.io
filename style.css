@@ -13,6 +13,10 @@ h1 {
     font-style: normal;
 }
 
+map {
+	pointer-events: none;
+}
+
 .noto-sans-jp-<Noto> {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
