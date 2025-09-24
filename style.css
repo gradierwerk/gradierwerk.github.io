@@ -2,9 +2,15 @@
     --text-color: #e84509;
     --back-color: #ddd;
 }
+
+main {
+    z-index: 1;
+}
+
 a {
     text-decoration: none;
-    color: #e84509; }
+    color: #e84509;
+}
 
 h1 {
     font-family: "Noto Sans JP", sans-serif;
@@ -13,54 +19,7 @@ h1 {
     font-style: normal;
 }
 
-.noto-sans-jp-<Noto> {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-.shippori-mincho-b1-regular {
-  font-family: "Shippori Mincho B1", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.honbun {
-  width: 100%;
-}
-.logo {
-  position: fixed;
-  top: 0px;
-  padding: 3%;
-}
-.multi_column {
-  display: grid;
-  justify-content: left;
-  margin-top: 0px;
-  grid-template-columns: 1fr 3.75fr; /* 左固定幅 + 右可変幅 */
-}
-
-.menu {
-  position: fixed;
-  top: 110px;
-  min-height: 200px;
-  margin-left: 3%;
-  width: 400px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 200;
-  line-height:40px;
-  grid-column: 1;
-}
-.content {
-  position: relative;
-  margin-top: 10vh;
-  margin-right:3%;
-  width: max-content;
-  text-align: left;
-  line-height:30px;
-  grid-column: 2;
-}
-.works img:hover{
+linkimage:hover{
 	opacity:0.5;
 	transition:0.3s;
 }
@@ -74,4 +33,58 @@ body {
     font-style: normal;
     width: 100%;
     margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
 }
+
+.noto-sans-jp-<Noto> {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.shippori-mincho-b1-regular {
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.honbun {
+  width: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  padding: 3%;
+}
+
+.multi_column {
+  display: grid;
+  justify-content: left;
+  margin-top: 0;
+  grid-template-columns: 1fr 3.75fr; /* 左固定幅 + 右可変幅 */
+}
+
+.menu {
+  position: fixed;
+  top: 12%;
+  min-height: 20%;
+  margin-left: 3%;
+  width: 25%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 200;
+  line-height:40px;
+  grid-column: 1;
+}
+
+.content {
+  position: relative;
+  margin-top: 10vh;
+  width: 75%;
+  text-align: left;
+  line-height:30px;
+  grid-column: 2;
+}
+
