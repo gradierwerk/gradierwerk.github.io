@@ -19,9 +19,30 @@ h1 {
     font-style: normal;
 }
 
-linkimage:hover{
+h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 10px 0 10px 0;
+}
+
+.linkimage:hover,.linktext:hover{
 	opacity:0.5;
 	transition:0.3s;
+}
+
+.linktext {
+  color:#fff;
+  background-color: #e84509;
+  display: inline-block;
+  width: 200px;
+  height:40px;
+  margin: 0 0 10px 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  line-height: 38px;/*文字の高さ微調整*/
 }
 
 body {
@@ -79,6 +100,14 @@ body {
   grid-column: 1;
 }
 
+.SNSiconwrapper {
+  margin-top:20px;
+}
+
+.SNSiconwrapper a{
+  margin-right:10px;
+}
+
 .content {
   position: relative;
   margin-top: 10vh;
@@ -88,3 +117,12 @@ body {
   grid-column: 2;
 }
 
+.works_caption {
+  margin:0 0 40px 0;
+}
+
+.author_list {
+  margin: 10px 0 0 0;
+  font-size: small;
+  line-height: 20px;
+}
