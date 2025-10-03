@@ -9,7 +9,7 @@ main {
 
 a {
     text-decoration: none;
-    color: #e84509;
+    color: var(--text-color);
 }
 
 h1 {
@@ -27,14 +27,17 @@ h2 {
   margin: 10px 0 10px 0;
 }
 
-.linkimage:hover,.linktext:hover{
-	opacity:0.5;
-	transition:0.3s;
+.linkimage,.linktext{
+  opacity: 1;
+  transition:0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .linktext {
   color:#fff;
-  background-color: #e84509;
+  background-color: var(--text-color);
   display: inline-block;
   width: 200px;
   height:40px;
@@ -58,11 +61,13 @@ body {
     position: relative;
 }
 
-.noto-sans-jp-<Noto> {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+.background-map {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.1;
+  position: absolute;
 }
 
 .shippori-mincho-b1-regular {
@@ -95,9 +100,19 @@ body {
   margin-left: 3%;
   width: 25%;
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: 200;
-  line-height:40px;
+  font-weight: 300;
+  line-height: 40px;
   grid-column: 1;
+  a {
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    transition-property: text-decoration-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    &:hover {
+      text-decoration-color: var(--text-color);
+    }
+  }
 }
 
 .SNSiconwrapper {
