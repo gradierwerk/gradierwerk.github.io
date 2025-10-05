@@ -150,10 +150,26 @@ body {
 }
 
 
+.post_list {
+  margin: 30px 0 0 0;
+  font-size: small;
+  line-height: 20px;
+  border-spacing: 4em 0;
+
+  td:first-child {
+    text-align: right;
+    width: 5em;
+  }
 }
 
 .author_list {
   margin: 10px 0 0 0;
   font-size: small;
   line-height: 20px;
+  border-spacing: 1em 0;
+
+  td:first-child {
+    text-align: right;
+    width: 15em;
+  }
 }
