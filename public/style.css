@@ -25,10 +25,6 @@ body {
   }
 }
 
-main {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -95,6 +91,7 @@ h2 {
 }
 
 .multi_column {
+  width: 100%;
   display: grid;
   justify-content: left;
   margin-top: 0;
@@ -102,7 +99,7 @@ h2 {
   /* 左固定幅 + 右可変幅 */
 }
 
-.menu {
+nav {
   position: fixed;
   top: calc(6% + 30px);
   margin-left: 3%;
@@ -111,17 +108,17 @@ h2 {
   font-weight: 300;
   line-height: 40px;
   grid-column: 1;
+}
 
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
+.page_list {
+  padding: 0;
+  margin: 0;
+  
   li {
     list-style: none;
   }
-
-  a:not(.SNSiconwrapper a) {
+  
+  a {
     transition-property: letter-spacing;
     transition-duration: 200ms;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -141,7 +138,7 @@ h2 {
   margin-right: 10px;
 }
 
-.content {
+main {
   position: relative;
   margin-top: 8vh;
   max-width: 40ic;
