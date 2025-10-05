@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
+
 :root {
   --text-color: #e84509;
   --back-color: #ddd;
+  --back-color-dark: #222;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--back-color);
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--back-color-dark);
+  }
 }
 
 main {
-  z-index: 1;
+  width: 100%;
 }
 
 a {
@@ -51,19 +73,7 @@ h2 {
   /*文字の高さ微調整*/
 }
 
-body {
-  background-color: var(--back-color);
-  font-family:  sans-serif;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  font-style: normal;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
-  position: relative;
-}
-
-.background-map {
+#map {
   height: 100%;
   width: 100%;
   pointer-events: none;
@@ -72,20 +82,10 @@ body {
   position: absolute;
 }
 
-.shippori-mincho-b1-regular {
-  font-family: "Shippori Mincho B1", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.honbun {
-  width: 100%;
-}
-
 .logo {
   position: fixed;
-  top: 0;
-  padding: 3%;
+  top: 3%;
+  left: 3%;
 }
 
 .multi_column {
@@ -98,10 +98,8 @@ body {
 
 .menu {
   position: fixed;
-  top: 12%;
-  min-height: 20%;
+  top: calc(6% + 30px);
   margin-left: 3%;
-  width: 25%;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
   line-height: 40px;
@@ -138,8 +136,8 @@ body {
 
 .content {
   position: relative;
-  margin-top: 10vh;
-  width: 75%;
+  margin-top: 8vh;
+  max-width: 40ic;
   text-align: left;
   line-height: 30px;
   grid-column: 2;
@@ -148,7 +146,6 @@ body {
 .works_caption {
   margin: 0 0 40px 0;
 }
-
 
 .post_list {
   margin: 20px 0 0 0;
