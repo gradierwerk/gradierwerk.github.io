@@ -114,17 +114,19 @@ h2 {
 
   ul {
     padding: 0;
-    margin: 0
+    margin: 0;
   }
 
   li {
     list-style: none;
   }
 
-  a {
+  a:not(.SNSiconwrapper a) {
     transition-property: letter-spacing;
     transition-duration: 200ms;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: inline-block;
+    width: 250px;
     &:hover {
       letter-spacing: 1em;
     }
