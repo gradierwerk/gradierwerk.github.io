@@ -88,6 +88,10 @@ h2 {
   position: fixed;
   top: 3%;
   left: 3%;
+  img {
+    width: 70px;
+    height: auto;
+  }
 }
 
 .multi_column {
