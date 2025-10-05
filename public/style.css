@@ -80,16 +80,6 @@ h2 {
   position: absolute;
 }
 
-.logo {
-  position: fixed;
-  top: 3%;
-  left: 3%;
-  img {
-    width: 70px;
-    height: auto;
-  }
-}
-
 .multi_column {
   width: 100%;
   display: grid;
@@ -101,13 +91,23 @@ h2 {
 
 nav {
   position: fixed;
-  top: calc(6% + 30px);
-  margin-left: 3%;
+  top: 0;
+  left: 0;
+  margin-left: 3vw;
+  margin-top: 25px;
   font-size: large;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
   line-height: 40px;
   grid-column: 1;
+}
+
+.logo {
+  margin: 5px 0;
+  img {
+    width: 70px;
+    height: auto;
+  }
 }
 
 .page_list {
