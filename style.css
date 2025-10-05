@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&display=swap');
+
 :root {
   --text-color: #e84509;
-  --back-color: #ddd;
+  --back-color: #eee;
+  --back-color-dark: #111;
+}
+
+body {
+  color: #111;
+  background-color: var(--back-color);
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--back-color-dark);
+    color: #eee;
+  }
 }
 
 main {
-  z-index: 1;
+  width: 100%;
 }
 
 a {
@@ -13,6 +35,7 @@ a {
 }
 
 h1 {
+  color: var(--text-color);
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -25,6 +48,7 @@ h2 {
   font-weight: 500;
   font-style: normal;
   margin: 10px 0 10px 0;
+  padding-bottom: 3px;
 }
 
 .linkimage,
@@ -51,19 +75,7 @@ h2 {
   /*文字の高さ微調整*/
 }
 
-body {
-  background-color: var(--back-color);
-  font-family:  sans-serif;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  font-style: normal;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
-  position: relative;
-}
-
-.background-map {
+#map {
   height: 100%;
   width: 100%;
   pointer-events: none;
@@ -72,20 +84,10 @@ body {
   position: absolute;
 }
 
-.shippori-mincho-b1-regular {
-  font-family: "Shippori Mincho B1", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.honbun {
-  width: 100%;
-}
-
 .logo {
   position: fixed;
-  top: 0;
-  padding: 3%;
+  top: 3%;
+  left: 3%;
 }
 
 .multi_column {
@@ -98,10 +100,9 @@ body {
 
 .menu {
   position: fixed;
-  top: 12%;
-  min-height: 20%;
+  top: calc(6% + 30px);
   margin-left: 3%;
-  width: 25%;
+  font-size: large;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
   line-height: 40px;
@@ -117,13 +118,11 @@ body {
   }
 
   a {
-    text-decoration-line: underline;
-    text-decoration-color: transparent;
-    transition-property: text-decoration-color;
+    transition-property: letter-spacing;
     transition-duration: 200ms;
-    transition-timing-function: ease-out;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     &:hover {
-      text-decoration-color: var(--text-color);
+      letter-spacing: 1em;
     }
   }
 }
@@ -138,23 +137,48 @@ body {
 
 .content {
   position: relative;
-  margin-top: 10vh;
-  width: 75%;
+  margin-top: 8vh;
+  max-width: 40ic;
   text-align: left;
   line-height: 30px;
+  padding-right: 2ic;
   grid-column: 2;
 }
 
-.works_caption {
-  margin: 0 0 40px 0;
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2ic;
+  row-gap: 16px;
 }
 
+.works_caption {
+  margin-bottom: 2lh;
+  flex-basis: 40ic;
+}
+
+.works_title {
+  border-width: 0;
+  border-left-width: 5px;
+  border-style: solid;
+  padding-left: 10px;
+  border-color: var(--text-color);
+  margin-bottom: 16px;
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: small;
+    line-height: normal;
+  }
+}
 
 .post_list {
   margin: 20px 0 0 0;
   font-size: small;
   line-height: 20px;
-
+  
   td:first-child {
     text-align: right;
     padding-right: 1.5em;
@@ -169,5 +193,6 @@ body {
   td:first-child {
     text-align: right;
     padding-right: 1.5em;
+    text-wrap-mode: nowrap;
   }
 }
