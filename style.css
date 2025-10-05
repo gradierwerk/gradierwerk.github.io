@@ -1,22 +1,22 @@
 :root {
-    --text-color: #e84509;
-    --back-color: #ddd;
+  --text-color: #e84509;
+  --back-color: #ddd;
 }
 
 main {
-    z-index: 1;
+  z-index: 1;
 }
 
 a {
-    text-decoration: none;
-    color: var(--text-color);
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 h1 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 h2 {
@@ -27,38 +27,40 @@ h2 {
   margin: 10px 0 10px 0;
 }
 
-.linkimage,.linktext{
+.linkimage,
+.linktext {
   opacity: 1;
-  transition:0.3s;
+  transition: 0.3s;
+
   &:hover {
     opacity: 0.5;
   }
 }
 
 .linktext {
-  color:#fff;
+  color: #fff;
   background-color: var(--text-color);
   display: inline-block;
   width: 200px;
-  height:40px;
+  height: 40px;
   margin: 0 0 10px 0;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   text-align: center;
-  line-height: 38px;/*文字の高さ微調整*/
+  line-height: 38px;
+  /*文字の高さ微調整*/
 }
 
 body {
-    color: var(--text-color);
-    background-color: var(--back-color);
-    font-family: "Shippori Mincho B1", serif;
-    font-weight: 400;
-    font-optical-sizing: auto;
-    font-style: normal;
-    width: 100%;
-    margin: 0 auto;
-    min-height: 100vh;
-    position: relative;
+  background-color: var(--back-color);
+  font-family:  sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
 }
 
 .background-map {
@@ -90,7 +92,8 @@ body {
   display: grid;
   justify-content: left;
   margin-top: 0;
-  grid-template-columns: 1fr 3.75fr; /* 左固定幅 + 右可変幅 */
+  grid-template-columns: 1fr 3.75fr;
+  /* 左固定幅 + 右可変幅 */
 }
 
 .menu {
@@ -103,6 +106,16 @@ body {
   font-weight: 300;
   line-height: 40px;
   grid-column: 1;
+
+  ul {
+    padding: 0;
+    margin: 0
+  }
+
+  li {
+    list-style: none;
+  }
+
   a {
     text-decoration-line: underline;
     text-decoration-color: transparent;
@@ -116,11 +129,11 @@ body {
 }
 
 .SNSiconwrapper {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
-.SNSiconwrapper a{
-  margin-right:10px;
+.SNSiconwrapper a {
+  margin-right: 10px;
 }
 
 .content {
@@ -128,12 +141,15 @@ body {
   margin-top: 10vh;
   width: 75%;
   text-align: left;
-  line-height:30px;
+  line-height: 30px;
   grid-column: 2;
 }
 
 .works_caption {
-  margin:0 0 40px 0;
+  margin: 0 0 40px 0;
+}
+
+
 }
 
 .author_list {
