@@ -3,11 +3,19 @@
 :root {
   --accent-color: #e84509;
   --back-color: #eee;
-  --back-color-dark: #111;
+  --text-color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --accent-color: #e84509;
+  --back-color: #111;
+  --text-color: #eee;
+  }
 }
 
 body {
-  color: #111;
+  color: var(--text-color);
   background-color: var(--back-color);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -18,13 +26,6 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--back-color-dark);
-    color: #eee;
-  }
 }
 
 a {
