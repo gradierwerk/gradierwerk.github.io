@@ -45,23 +45,23 @@ h2 {
   font-style: normal;
 }
 
-.linkimage,
-.linktext {
+.banner_image,
+.banner_text {
+  display: inline-block;
   opacity: 1;
   transition: 0.3s;
+  margin: 0 0 10px 0;
+  width: 200px;
+  height: 40px;
 
   &:hover {
     opacity: 0.5;
   }
 }
 
-.linktext {
+.banner_text {
   color: #fff;
   background-color: var(--accent-color);
-  display: inline-block;
-  width: 200px;
-  height: 40px;
-  margin: 0 0 10px 0;
   font-weight: 500;
   text-align: center;
   line-height: 38px;
