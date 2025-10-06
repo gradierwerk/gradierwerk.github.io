@@ -145,19 +145,19 @@ main {
   grid-column: 2;
 }
 
-.works {
+.work {
   display: flex;
   flex-wrap: wrap;
   column-gap: 2ic;
   row-gap: 16px;
 }
 
-.works_caption {
+.work_caption {
   margin-bottom: 2lh;
   flex-basis: 40ic;
 }
 
-.works_title {
+.work_title {
   border-width: 0;
   border-left-width: 5px;
   border-style: solid;
