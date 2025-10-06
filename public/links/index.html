@@ -43,15 +43,83 @@
     </nav>
     <main>
       <h1>banner</h1>
+      <p style="margin-top: 0;">本サイトはリンク自由です。</p>
       <div>
         <a href="https://gradierwerk.github.io" class="linkimage"><img src="https://gradierwerk.github.io/banner.png" alt="Gradierwerk" width="200" height="40"></a>
       </div>
-      <div>
-        <code>
-          &lt;a href=&quot;https://gradierwerk.github.io&quot;&gt;&lt;img src=&quot;https://gradierwerk.github.io/banner.png&quot;&gt;&lt;/a&gt;
-        </code>
-      </div>
-      <p style="margin-top: 0;">本サイトはリンク自由です</p>
+      <code>&lt;a href="https://gradierwerk.github.io"&gt;&lt;img src="https://gradierwerk.github.io/banner.png"&gt;&lt;/a&gt;</code>
+      <script>
+      document.querySelectorAll("code").forEach(codeBlock => {
+        codeBlock.addEventListener("click", async function () {
+          try {
+            await navigator.clipboard.writeText(this.textContent);
+            this.classList.add("clicked");
+            setTimeout(() => this.classList.remove("clicked"), 1500);
+          } catch (err) {
+            console.error("copy failed", err);
+          }
+        })
+      });
+      </script>
+      <style>
+        code {
+          position: relative;
+          background: #222;
+          color: #eee;
+          cursor: pointer;
+          padding: 0.5em 1em;
+          font-size: 0.9em;
+          display: block;
+          overflow-x: auto;
+          font-family: "Consolas", "Courier New", monospace;
+          white-space: pre;
+        }
+
+        code::before {
+          content: "Copy";
+          background: #555;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          width: 70px;
+          height: 30px;
+          z-index: 10;
+          text-align: center;
+          line-height: 30px;
+          color: #eee;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+        }
+
+        code:hover::before {
+          opacity: 1;
+        }
+
+        code::after {
+          content: "Copied!";
+          background: #4caf50;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          width: 70px;
+          height: 30px;
+          z-index: 10;
+          text-align: center;
+          line-height: 30px;
+          color: #eee;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+        }
+
+        code.clicked::after {
+          opacity: 1;
+        }
+      </style>
+
       <h1>links</h1>
       <div>
         <a href="https://mikanixonable.github.io" class="linkimage"><img src="https://mikanixonable.github.io/banner.png" alt="月面植物園" width="200" height="40"></a>
