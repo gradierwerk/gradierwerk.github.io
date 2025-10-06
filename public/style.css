@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&display=swap');
 
 :root {
-  --text-color: #e84509;
+  --accent-color: #e84509;
   --back-color: #eee;
   --back-color-dark: #111;
 }
@@ -27,11 +27,11 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--accent-color);
 }
 
 h1 {
-  color: var(--text-color);
+  color: var(--accent-color);
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -59,7 +59,7 @@ h2 {
 
 .linktext {
   color: #fff;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   display: inline-block;
   width: 200px;
   height: 40px;
@@ -162,7 +162,7 @@ main {
   border-left-width: 5px;
   border-style: solid;
   padding-left: 10px;
-  border-color: var(--text-color);
+  border-color: var(--accent-color);
   margin-bottom: 16px;
   h2 {
     margin: 0;
