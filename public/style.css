@@ -5,6 +5,7 @@
   --accent-color: #e84509;
   --back-color: #eee;
   --text-color: #111;
+  --side-margin: max(4vw, 16px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,13 +19,39 @@
 @media screen and (width < 768px) {
   nav {
     position: relative;
+    top: 16px;
+    left: var(--side-margin);
+    line-height: normal;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1em;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "logo list"
+      "SNS  list";
+
+    .logo {
+      grid-area: logo;
+    }
+
+    .page_list {
+      grid-area: list;
+    }
+
+    .SNSiconwrapper {
+      grid-area: SNS;
+      margin: 0;
+    }
   }
 
   main {
     margin-top: 0;
     margin-left: 0;
-    padding-left: max(4vw, 1em);
-    padding-right: max(4vw, 1em);
+    padding-inline: var(--side-margin);
+  }
+
+  h1 {
+    margin-block: 1.33em;
   }
 }
 
@@ -40,7 +67,7 @@
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
-    position: relative;
+    position: absolute;
   }
 
   nav {
@@ -53,14 +80,12 @@
   }
 
   main {
-    position: relative;
     margin-top: 8vh;
     margin-left: 20vw;
     max-width: 40ic;
     text-align: left;
     line-height: 30px;
     padding-right: 2ic;
-    grid-column: 2;
   }
 
   a {
@@ -72,6 +97,7 @@
     color: var(--accent-color);
     font-weight: 500;
     font-style: normal;
+    margin-block: 1.67em;
   }
 
   h2 {
