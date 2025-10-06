@@ -45,8 +45,8 @@ h2 {
   font-style: normal;
 }
 
-.linkimage,
-.linktext {
+.banner_image,
+.banner_text {
   display: inline-block;
   opacity: 1;
   transition: 0.3s;
@@ -59,7 +59,7 @@ h2 {
   }
 }
 
-.linktext {
+.banner_text {
   color: #fff;
   background-color: var(--accent-color);
   font-weight: 500;
