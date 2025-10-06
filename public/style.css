@@ -9,6 +9,8 @@
 body {
   color: #111;
   background-color: var(--back-color);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
   font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
@@ -32,15 +34,11 @@ a {
 
 h1 {
   color: var(--accent-color);
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 
 h2 {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   margin: 10px 0 10px 0;
@@ -64,7 +62,6 @@ h2 {
   width: 200px;
   height: 40px;
   margin: 0 0 10px 0;
-  font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   text-align: center;
   line-height: 38px;
@@ -94,7 +91,6 @@ nav {
   top: 25px;
   left: 3vw;
   font-size: large;
-  font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
   line-height: 40px;
 }
