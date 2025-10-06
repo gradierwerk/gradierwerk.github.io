@@ -82,8 +82,7 @@ h2 {
   display: grid;
   justify-content: left;
   margin-top: 0;
-  grid-template-columns: 1fr 3.75fr;
-  /* 左固定幅 + 右可変幅 */
+  grid-template-columns: 1fr 4fr;
 }
 
 nav {
@@ -116,7 +115,9 @@ nav {
     transition-duration: 200ms;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: inline-block;
-    width: 250px;
+    width: calc(5ch + 5em); /* hoverした時の字間を考慮して5文字分 */
+    white-space: nowrap;
+    overflow: hidden;
     &:hover {
       letter-spacing: 1em;
     }
