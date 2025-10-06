@@ -22,6 +22,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&family=Shippori+Mincho+B1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    .code-wrapper {
+      position: relative;
+      background: #222;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      font-size: 0.9em;
+      font-family: "Consolas", "Courier New", monospace;
+    }
+
+    .code-wrapper code {
+      display: block;
+      padding: 0.5em 1em;
+      white-space: pre-wrap;
+      word-break: break-all;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .code-wrapper code::-webkit-scrollbar{
+      display: none;
+    }
+
+    .code-wrapper::before {
+      content: "Copy";
+      background: #555;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 70px;
+      height: 30px;
+      z-index: 10;
+      text-align: center;
+      line-height: 30px;
+      color: #eee;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .code-wrapper:hover::before {
+      opacity: 1;
+    }
+
+    .code-wrapper::after {
+      content: "Copied!";
+      background: #4caf50;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 70px;
+      height: 30px;
+      z-index: 10;
+      text-align: center;
+      line-height: 30px;
+      color: #eee;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .code-wrapper.clicked::after {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <div id="map"></div>
@@ -42,16 +111,6 @@
       </div>
     </nav>
     <main>
-      <h1>banner</h1>
-      <div>
-        <a href="https://gradierwerk.github.io" class="linkimage"><img src="https://gradierwerk.github.io/banner.png" alt="Gradierwerk" width="200" height="40"></a>
-      </div>
-      <div>
-        <code>
-          &lt;a href=&quot;https://gradierwerk.github.io&quot;&gt;&lt;img src=&quot;https://gradierwerk.github.io/banner.png&quot;&gt;&lt;/a&gt;
-        </code>
-      </div>
-      <p style="margin-top: 0;">本サイトはリンク自由です</p>
       <h1>links</h1>
       <div>
         <a href="https://mikanixonable.github.io" class="linkimage"><img src="https://mikanixonable.github.io/banner.png" alt="月面植物園" width="200" height="40"></a>
@@ -68,6 +127,29 @@
       <div><a href="https://awomomiji.com" class="linktext">青葉小路(あをもみじ)</a></div>
       <div><a href="https://www.fabon.info" class="linktext">ふぁぼん</a></div>
       <div><a href="https://synomare.github.io/" class="linktext">synomare</a></div>
+
+      <h2>embed</h2>
+      <p style="margin-top: 0;">本サイトはリンク自由です。</p>
+      <div>
+        <a href="https://gradierwerk.github.io" class="linkimage"><img src="https://gradierwerk.github.io/banner.png" alt="Gradierwerk" width="200" height="40"></a>
+      </div>
+      <div class="code-wrapper">
+        <code>&lt;a href="https://gradierwerk.github.io"&gt;&lt;img src="https://gradierwerk.github.io/banner.png"&gt;&lt;/a&gt;</code>
+      </div>
+      <script>
+      document.querySelectorAll(".code-wrapper").forEach(codeBlock => {
+        codeBlock.addEventListener("click", async function () {
+          try {
+            text = this.querySelector("code").textContent;
+            await navigator.clipboard.writeText(text);
+            this.classList.add("clicked");
+            setTimeout(() => this.classList.remove("clicked"), 1500);
+          } catch (err) {
+            console.error("copy failed", err);
+          }
+        })
+      });
+      </script>
     </main>
   </div><!-- class="multi_column" -->
   <!-- 地図表示 -->

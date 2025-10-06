@@ -3,11 +3,19 @@
 :root {
   --accent-color: #e84509;
   --back-color: #eee;
-  --back-color-dark: #111;
+  --text-color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --accent-color: #e84509;
+  --back-color: #111;
+  --text-color: #eee;
+  }
 }
 
 body {
-  color: #111;
+  color: var(--text-color);
   background-color: var(--back-color);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -18,13 +26,6 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--back-color-dark);
-    color: #eee;
-  }
 }
 
 a {
@@ -39,10 +40,9 @@ h1 {
 }
 
 h2 {
+  color: var(--accent-color);
   font-weight: 500;
   font-style: normal;
-  margin: 10px 0 10px 0;
-  padding-bottom: 3px;
 }
 
 .linkimage,
@@ -161,7 +161,9 @@ main {
   border-color: var(--accent-color);
   margin-bottom: 16px;
   h2 {
+    color: var(--text-color);
     margin: 0;
+    padding-bottom: 3px;
   }
   p {
     margin: 0;
