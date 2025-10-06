@@ -110,15 +110,9 @@
 .banner_image,
 .banner_text {
   display: inline-block;
-  opacity: 1;
-  transition: 0.3s;
   margin: 0 0 10px 0;
   width: 200px;
   height: 40px;
-
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 .banner_text {
@@ -128,6 +122,15 @@
   text-align: center;
   line-height: 38px;
   /*文字の高さ微調整*/
+}
+
+.hover_fade {
+  opacity: 1;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 #map {
