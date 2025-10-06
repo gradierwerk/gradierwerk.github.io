@@ -36,11 +36,13 @@
 
     .page_list {
       grid-area: list;
+      text-align: right;
     }
 
     .SNSiconwrapper {
       grid-area: SNS;
       margin: 0;
+      display: none;
     }
   }
 
