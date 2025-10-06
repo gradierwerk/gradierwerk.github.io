@@ -64,12 +64,15 @@
       <div>
         <a href="https://gradierwerk.github.io" class="linkimage"><img src="https://gradierwerk.github.io/banner.png" alt="Gradierwerk" width="200" height="40"></a>
       </div>
-      <code>&lt;a href="https://gradierwerk.github.io"&gt;&lt;img src="https://gradierwerk.github.io/banner.png"&gt;&lt;/a&gt;</code>
+      <div class="code-wrapper">
+        <code>&lt;a href="https://gradierwerk.github.io"&gt;&lt;img src="https://gradierwerk.github.io/banner.png"&gt;&lt;/a&gt;</code>
+      </div>
       <script>
-      document.querySelectorAll("code").forEach(codeBlock => {
+      document.querySelectorAll(".code-wrapper").forEach(codeBlock => {
         codeBlock.addEventListener("click", async function () {
           try {
-            await navigator.clipboard.writeText(this.textContent);
+            text = this.querySelector("code").textContent;
+            await navigator.clipboard.writeText(text);
             this.classList.add("clicked");
             setTimeout(() => this.classList.remove("clicked"), 1500);
           } catch (err) {
@@ -79,20 +82,31 @@
       });
       </script>
       <style>
-        code {
+        .code-wrapper {
           position: relative;
           background: #222;
           color: #eee;
+          margin: 0;
+          padding: 0;
           cursor: pointer;
-          padding: 0.5em 1em;
           font-size: 0.9em;
-          display: block;
-          overflow-x: auto;
           font-family: "Consolas", "Courier New", monospace;
-          white-space: pre;
         }
 
-        code::before {
+        .code-wrapper code {
+          display: block;
+          padding: 0.5em 1em;
+          white-space: pre-wrap;
+          word-break: break-all;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        .code-wrapper code::-webkit-scrollbar{
+          display: none;
+        }
+
+        .code-wrapper::before {
           content: "Copy";
           background: #555;
           position: absolute;
@@ -110,11 +124,11 @@
           pointer-events: none;
         }
 
-        code:hover::before {
+        .code-wrapper:hover::before {
           opacity: 1;
         }
 
-        code::after {
+        .code-wrapper::after {
           content: "Copied!";
           background: #4caf50;
           position: absolute;
@@ -132,7 +146,7 @@
           pointer-events: none;
         }
 
-        code.clicked::after {
+        .code-wrapper.clicked::after {
           opacity: 1;
         }
       </style>
