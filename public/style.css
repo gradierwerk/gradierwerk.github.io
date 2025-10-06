@@ -189,9 +189,20 @@
   row-gap: 16px;
 }
 
+.work_thumbnail {
+  flex: 300px 0 1;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .work_caption {
+  flex: 40ic 0 1;
   margin-bottom: 2lh;
-  flex-basis: 40ic;
 }
 
 .work_title {
@@ -233,5 +244,29 @@
     text-align: right;
     padding-right: 1.5em;
     text-wrap-mode: nowrap;
+  }
+}
+
+@media screen and (width < 768px) {
+  .work {
+    table {
+      display: block;
+    }
+    tbody {
+      display: block;
+    }
+    tr {
+      display: block;
+    }
+    td {
+      display: block;
+      &:first-child {
+        text-align: left;
+        padding-right: 0;
+      }
+      &:last-child {
+        padding-left: 1.5em;
+      }
+    }
   }
 }
