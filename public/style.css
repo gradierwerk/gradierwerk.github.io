@@ -26,10 +26,11 @@ body {
   color: var(--text-color);
   background-color: var(--back-color);
   font: normal 400 16px/1.5 "Noto Sans JP", sans-serif;
-  &::selection {
-    color: #fff;
-    background-color: var(--selection-color);
-  }
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--selection-color);
 }
 
 #map {
@@ -92,7 +93,7 @@ nav {
     }
   }
 
-  .SNSiconwrapper {
+  .sns_icon_wrapper {
     display: flex;
     flex-flow: row nowrap;
     gap: 24px;
@@ -112,7 +113,7 @@ footer {
   gap: 16px;
   font-size: small;
 
-  .SNSiconwrapper {
+  .sns_icon_wrapper {
     display: flex;
     flex-flow: row nowrap;
     gap: 48px;
@@ -235,7 +236,8 @@ a {
         }
       }
     }
-    .SNSiconwrapper {
+
+    .sns_icon_wrapper {
       display: none;
     }
   }
