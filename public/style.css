@@ -52,7 +52,6 @@ main {
 }
 
 nav {
-  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -71,10 +70,10 @@ nav {
   }
 
   .page_list {
-    margin: 0;
+    margin: -0.5em 0 0 0; /* ロゴと上辺合わせ */
     padding: 0;
     text-align: right;
-    line-height: normal;
+    line-height: 1.8em;
     li {
       list-style: none;
     }
