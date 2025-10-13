@@ -131,7 +131,7 @@ a {
   }
 }
 
-@media screen and (width >= 768px) {
+@media (width >= 768px) {
   nav {
     position: fixed;
     top: 25px;
