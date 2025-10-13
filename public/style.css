@@ -134,6 +134,7 @@ a {
 .work {
   display: flex;
   flex-flow: row wrap;
+  align-items: start;
   gap: 16px 2ic;
   margin: 0 0 2lh 0;
 }
