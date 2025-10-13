@@ -24,6 +24,10 @@ body {
   color: var(--text-color);
   background-color: var(--back-color);
   font: normal 400 16px/1.5 "Noto Sans JP", sans-serif;
+  &::selection {
+    color: #FFF;
+    background-color: var(--accent-color);
+  }
 }
 
 #map {
