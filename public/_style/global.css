@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&display=swap");
 
 :root {
   --accent-color: #e84509;
@@ -9,10 +9,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --accent-color: #e84509;
-  --selection-color: #c13600;
-  --back-color: #111;
-  --text-color: #eee;
+    --accent-color: #e84509;
+    --selection-color: #c13600;
+    --back-color: #111;
+    --text-color: #eee;
   }
 }
 
@@ -52,7 +52,6 @@ main {
 }
 
 nav {
-  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -71,10 +70,10 @@ nav {
   }
 
   .page_list {
-    margin: 0;
+    margin: -0.5em 0 0 0; /* ロゴと上辺合わせ */
     padding: 0;
     text-align: right;
-    line-height: normal;
+    line-height: 1.8em;
     li {
       list-style: none;
     }
@@ -86,7 +85,7 @@ nav {
 }
 
 footer {
-  position:absolute;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -132,82 +131,13 @@ a {
   }
 }
 
-.work {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 16px 2ic;
-  margin: 0 0 2lh 0;
-}
-
-.work_thumbnail {
-  flex: 300px 0 1;
-  aspect-ratio: 1 / 1;
-  img {
-    width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-}
-
-.work_caption {
-  flex: 40ic 0 1;
-}
-
-.work_title {
-  border-left: 5px solid var(--accent-color);
-  padding: 0 0 0 10px;
-  margin: 0 0 16px 0;
-  h2 {
-    color: var(--text-color);
-    margin: 0;
-    padding-bottom: 3px;
-  }
-  p {
-    margin: 0;
-    font-size: small;
-    line-height: normal;
-  }
-}
-
-.post_list,
-.author_list {
-  margin: 20px 0 0 0;
-  font-size: small;
-  line-height: 20px;
-  
-  td:first-child {
-    text-align: right;
-    padding-right: 1.5em;
-  }
-}
-
-.author_list td:first-child {
-  text-wrap-mode: nowrap;
-}
-
-.banner_image,
-.banner_text {
-  display: inline-block;
-  margin: 0 0 10px 0;
-  width: 200px;
-  height: 40px;
-}
-
-.banner_text {
-  color: #fff;
-  background-color: var(--accent-color);
-  font-weight: 500;
-  text-align: center;
-  line-height: 38px; /* 文字の高さ微調整 */
-}
-
-@media screen and (width >= 768px) {
+@media (width >= 768px) {
   nav {
     position: fixed;
     top: 25px;
     left: 3vw;
     flex-flow: column nowrap;
-      
+
     .page_list {
       text-align: left;
       line-height: 2.2em;
@@ -239,29 +169,5 @@ a {
 
   h1 {
     margin-block: 1.67em;
-  }
-}
-
-@media (width < 768px) {
-  .work {
-    table {
-      display: block;
-    }
-    tbody {
-      display: block;
-    }
-    tr {
-      display: block;
-    }
-    td {
-      display: block;
-      &:first-child {
-        text-align: left;
-        padding-right: 0;
-      }
-      &:last-child {
-        padding-left: 1.5em;
-      }
-    }
   }
 }

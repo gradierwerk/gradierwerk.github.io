@@ -16,81 +16,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1" />
   <meta name="keywords" content="enden, enden_nix, Gradierwerk, gradierwerk" />
   <title>links | Gradierwerk</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/_style/global.css" />
+  <link rel="stylesheet" href="/_style/banner.css" />
+  <link rel="stylesheet" href="/_style/code.css" />
   <link rel="icon" href="/_assets/GW-logo.svg" sizes="any" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&family=Shippori+Mincho+B1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
-    .code-wrapper {
-      position: relative;
-      background: #222;
-      color: #eee;
-      margin: 0;
-      padding: 0;
-      cursor: pointer;
-      font-size: 0.9em;
-      font-family: "Consolas", "Courier New", monospace;
-    }
-
-    .code-wrapper code {
-      display: block;
-      padding: 0.5em 1em;
-      white-space: pre-wrap;
-      word-break: break-all;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .code-wrapper code::-webkit-scrollbar{
-      display: none;
-    }
-
-    .code-wrapper::before {
-      content: "Copy";
-      background: #555;
-      position: absolute;
-      display: block;
-      top: 0;
-      right: 0;
-      width: 70px;
-      height: 30px;
-      z-index: 10;
-      text-align: center;
-      line-height: 30px;
-      color: #eee;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .code-wrapper:hover::before {
-      opacity: 1;
-    }
-
-    .code-wrapper::after {
-      content: "Copied!";
-      background: #4caf50;
-      position: absolute;
-      display: block;
-      top: 0;
-      right: 0;
-      width: 70px;
-      height: 30px;
-      z-index: 10;
-      text-align: center;
-      line-height: 30px;
-      color: #eee;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .code-wrapper.clicked::after {
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
   <div id="map"></div>
@@ -134,20 +67,6 @@
     <div class="code-wrapper">
       <code>&lt;a href="https://gradierwerk.github.io"&gt;&lt;img src="https://gradierwerk.github.io/banner.png"&gt;&lt;/a&gt;</code>
     </div>
-    <script>
-    document.querySelectorAll(".code-wrapper").forEach(codeBlock => {
-      codeBlock.addEventListener("click", async function () {
-        try {
-          text = this.querySelector("code").textContent;
-          await navigator.clipboard.writeText(text);
-          this.classList.add("clicked");
-          setTimeout(() => this.classList.remove("clicked"), 1500);
-        } catch (err) {
-          console.error("copy failed", err);
-        }
-      })
-    });
-    </script>
   </main>
   <footer>
     <div class="sns_icon_wrapper">
@@ -158,6 +77,7 @@
     <p>© 2025 Gradierwerk</p>
   </footer>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-  <script src="/main.js" type="module"></script>
+  <script src="/_script/map-bg.js" type="module"></script>
+  <script src="/_script/code-copy.js"></script>
 </body>
 </html>
