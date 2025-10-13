@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200..800&display=swap");
 
 :root {
   --accent-color: #e84509;
@@ -9,10 +9,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --accent-color: #e84509;
-  --selection-color: #c13600;
-  --back-color: #111;
-  --text-color: #eee;
+    --accent-color: #e84509;
+    --selection-color: #c13600;
+    --back-color: #111;
+    --text-color: #eee;
   }
 }
 
@@ -85,7 +85,7 @@ nav {
 }
 
 footer {
-  position:absolute;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -137,7 +137,7 @@ a {
     top: 25px;
     left: 3vw;
     flex-flow: column nowrap;
-      
+
     .page_list {
       text-align: left;
       line-height: 2.2em;
