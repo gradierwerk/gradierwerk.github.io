@@ -90,7 +90,7 @@ nav {
     }
   }
 
-  .SNSiconwrapper {
+  .sns_icon_wrapper {
     display: flex;
     flex-flow: row nowrap;
     gap: 24px;
@@ -110,7 +110,7 @@ footer {
   gap: 16px;
   font-size: small;
 
-  .SNSiconwrapper {
+  .sns_icon_wrapper {
     display: flex;
     flex-flow: row nowrap;
     gap: 48px;
@@ -229,7 +229,7 @@ a {
       line-height: normal;
     }
 
-    .SNSiconwrapper {
+    .sns_icon_wrapper {
       display: none;
     }
   }
