@@ -2,6 +2,7 @@
 
 :root {
   --accent-color: #e84509;
+  --selection-color: #ff6133;
   --back-color: #eee;
   --text-color: #111;
 }
@@ -9,6 +10,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
   --accent-color: #e84509;
+  --selection-color: #c13600;
   --back-color: #111;
   --text-color: #eee;
   }
@@ -24,6 +26,11 @@ body {
   color: var(--text-color);
   background-color: var(--back-color);
   font: normal 400 16px/1.5 "Noto Sans JP", sans-serif;
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--selection-color);
 }
 
 #map {
