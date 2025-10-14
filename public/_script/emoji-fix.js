@@ -6,7 +6,7 @@
  * @returns {string} 異体字セレクタが追加された文字列
  */
 function addVariationSelector(text) {
-  const VARIATION_SELECTOR = '\uFE0F';
+  const VARIATION_SELECTOR = '\uFE00';
   const SMP_THRESHOLD = 0x10000; // 補助多言語面の開始位置
   
   let result = '';
