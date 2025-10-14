@@ -96,11 +96,17 @@ footer {
   align-items: center;
   gap: 16px;
   font-size: small;
+  text-align: center;
 
   .sns_icon_wrapper {
     display: flex;
     flex-flow: row nowrap;
     gap: 48px;
+  }
+
+  p a {
+    color: var(--text-color);
+    text-decoration: underline;
   }
 }
 
