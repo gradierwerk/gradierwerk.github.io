@@ -1,5 +1,5 @@
 /**
- * U+10000以降の文字（補助多言語面）に異体字セレクタ U+FE00 を追加する関数  
+ * U+10000以降の文字（補助多言語面）に異体字セレクタ U+FE00 を追加する
  * iOSでの絵文字の正常な表示を保証するために使用
  * 
  * @param {string} text 処理対象の文字列
@@ -12,26 +12,17 @@ function addVariationSelector(text) {
 }
 
 /**
- * 指定されたセレクタに一致する全ての要素のテキストに異体字セレクタを追加
- * 
- * **注意！** `textContent`の仕様により、要素内の子要素は取り除かれます
+ * 指定されたセレクタに一致する全ての要素のテキストに異体字セレクタを追加する
+ * **注意！** `textContent`の仕様により、要素内のHTML構造は破壊される
  * 
  * @param {string} selector CSSセレクタ（デフォルト: '.emoji'）
  */
 function fixEmojiElements(selector = '.emoji') {
-  document.querySelectorAll(selector).forEach((element) => {
+  document.querySelectorAll(selector).forEach(element => {
     element.textContent = addVariationSelector(element.textContent);
   });
 }
 
-// DOMContentLoaded時に自動実行
-if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => {
-    fixEmojiElements('.emoji');
-  });
-}
-
-// モジュールとしてエクスポート（必要に応じて）
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { addVariationSelector, fixEmojiElements };
-}
+document.addEventListener('DOMContentLoaded', () => {
+  fixEmojiElements('.emoji');
+});
