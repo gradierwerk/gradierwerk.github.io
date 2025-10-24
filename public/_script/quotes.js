@@ -12,8 +12,8 @@ async function loadQuotes() {
 
 async function getQuote() {
   const quotes = await loadQuotes();
-  const now = new Date().getTime();
-  return quotes[now % quotes.length];
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
 }
 
 /**
