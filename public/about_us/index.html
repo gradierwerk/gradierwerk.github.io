@@ -21,6 +21,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    table {
+      border-spacing: 0;
+      td {
+        vertical-align: top;
+        padding: 0;
+        &:first-child {
+          padding-right: 1em;
+        }
+      }
+    }
+    p#quote {
+      font-size: small;
+      line-height: 0.7lh;
+      q {
+        font-style: italic;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="map"></div>
@@ -41,7 +60,62 @@
   </nav>
   <main>
     <h1>about us</h1>
-    <p>同人サークル「Gradierwerk」は、何だっけ　何だっけ、、、？</p>
+    <p>
+      「Gradierwerk」は、小説、随筆、評論、詩、音楽、イラストレーション等多様な表現や媒体に渡って、SFを主なテーマとし、大胆な特殊装丁を凝らした同人誌の制作を中心とした活動を行ってきた同人サークルです。
+    </p>
+    <p id="quote">
+      <q name="quote">戦略級魔法少女合同やりたすぎ</q>
+      &#11834;
+      <span name="author">enden_nix</span>,
+      <span name="date">2023-10-10</span>
+    </p>
+    <h2>history</h2>
+    <table>
+      <tr>
+        <td>2023/11/26</td>
+        <td>「Gradierwerk」Discordサーバー設立</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>『戦略級魔法少女合同 黒点』制作</td>
+      </tr>
+      <tr>
+        <td>2024/05/18&#x301C;19</td>
+        <td><a href="https://comiaca.com/">コミックアカデミー</a>24 サークル参加</td>
+      </tr>
+      <tr>
+        <td>2024/05/19</td>
+        <td><a href="https://bunfree.net/">文学フリマ</a>東京38 サークル参加</td>
+      </tr>
+      <tr>
+        <td>2024/05/26</td>
+        <td><a href="https://comitia.co.jp/">コミティア</a>148 サークル参加</td>
+      </tr>
+      <tr>
+        <td>2024/08/12</td>
+        <td><a href="https://www.comiket.co.jp/">コミックマーケット</a>104 サークル参加</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>『環境SF合同 圏界面』制作</td>
+      </tr>
+      <tr>
+        <td>2024/11/17</td>
+        <td><a href="https://comitia.co.jp/">コミティア</a>150 サークル参加</td>
+      </tr>
+      <tr>
+        <td>2024/11/23&#x301C;24</td>
+        <td><a href="https://comiaca.com/">コミックアカデミー</a>25 サークル参加</td>
+      </tr>
+      <tr>
+        <td>2024/12/29&#x301C;30</td>
+        <td><a href="https://www.comiket.co.jp/">コミックマーケット</a>105 委託参加</td>
+      </tr>
+      <tr>
+        <td>2025/09/07</td>
+        <td><a href="https://comitia.co.jp/">コミティア</a>153 サークル参加</td>
+      </tr>
+    </table>
   </main>
   <footer>
     <div class="sns_icon_wrapper">
@@ -53,5 +127,6 @@
   </footer>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
   <script src="/_script/map-bg.js" type="module"></script>
+  <script src="/_script/quotes.js" type="module"></script>
 </body>
 </html>
