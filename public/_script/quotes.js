@@ -20,9 +20,9 @@ async function getQuote() {
  * @param {{author: string, source: string, date: string, content: string}} quote
  */
 function showQuote(quote) {
-  const qTag = document.querySelector("[name=quote]");
-  const authorTag = document.querySelector("[name=author]");
-  const dateTag = document.querySelector("[name=date]");
+  const qTag = document.querySelector("#quote-content");
+  const authorTag = document.querySelector("#quote-author");
+  const dateTag = document.querySelector("#quote-date");
   qTag.textContent = quote.content;
   authorTag.textContent = quote.author;
   dateTag.textContent = quote.date.split("T")[0].replaceAll("-", "/");
