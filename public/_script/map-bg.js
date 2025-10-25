@@ -11,7 +11,7 @@ async function loadCoastline() {
 }
 
 /**
- * 線分群上の一様乱数
+ * SVGを折れ線群に変換
  * @param {string} svgText
  * @returns {{x1: number, y1: number, x2: number, y2: number, length: number}[]}
  */
