@@ -27,7 +27,6 @@
 
     &::before {
       content: "";
-      display: inline-block;
       width: calc(var(--tl-blob-radius) * 2);
       height: calc(var(--tl-blob-radius) * 2);
       left: calc(var(--tl-blob-radius) * -1);
@@ -54,7 +53,7 @@
   }
 }
 
-@media (width >=768px) {
+@media (width >= 768px) {
   .timeline {
     margin-left: var(--tl-left-area);
 
