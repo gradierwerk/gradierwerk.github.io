@@ -58,12 +58,6 @@
     li {
       margin-left: 150px;
       margin-block: 2em;
-
-      &::before {
-        margin: auto 0;
-        top: 0;
-        bottom: 0;
-      }
     }
 
     li span {
