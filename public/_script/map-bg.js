@@ -64,11 +64,9 @@ function randomOnPolyline(polyline) {
  * @returns {{x: number, y: number}}
  */
 function randomOnCircle(radius) {
-  while (true) {
-    const x = Math.random() * 2 - 1;
-    const y = Math.random() * 2 - 1;
-    if (x * x + y * y <= 1) return { x: x * radius, y: y * radius };
-  }
+  const r = Math.sqrt(Math.random()) * radius;
+  const t = Math.random() * Math.PI * 2;
+  return { x:Math.cos(t) * r, y:Math.sin(t) * r };
 }
 
 /**
