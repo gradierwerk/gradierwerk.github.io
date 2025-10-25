@@ -35,7 +35,7 @@
 
     span {
       display: block;
-      margin-left: -15px;
+      margin-left: -15px; /* ネガティブインデント */
     }
   }
 
@@ -61,13 +61,14 @@
     }
 
     li span {
+      box-sizing: border-box;
       position: absolute;
-      left: -150px;
       top: 0;
-      width: 120px;
-      height: 2em;
-      line-height: 2em;
+      left: -150px;
+      width: 150px;
+      padding-right: 30px;
       text-align: right;
+      margin-left: 0; /* ネガティブインデントをキャンセル */
     }
   }
 }
