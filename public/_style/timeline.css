@@ -1,5 +1,9 @@
 .timeline {
-  margin: 0 2ic;
+  --tl-blob-radius: 6px;
+  --tl-left-area: 150px;
+  --tl-gap: 30px;
+
+  margin: 0 0 0 2ic;
   padding: 0;
   position: relative;
   list-style: none;
@@ -18,24 +22,25 @@
   li {
     margin-left: 0;
     margin-block: 1em;
-    padding-left: 30px;
+    padding-left: var(--tl-gap);
     position: relative;
 
     &::before {
       content: "";
       display: inline-block;
-      width: 12px;
-      height: 12px;
-      left: -6px;
-      top: calc(0.5lh - 6px);
+      width: calc(var(--tl-blob-radius) * 2);
+      height: calc(var(--tl-blob-radius) * 2);
+      left: calc(var(--tl-blob-radius) * -1);
+      top: calc(0.5lh - var(--tl-blob-radius));
       position: absolute;
-      border-radius: 6px;
+      border-radius: var(--tl-blob-radius);
       background-color: var(--accent-color);
     }
 
     span {
       display: block;
-      margin-left: -15px; /* ネガティブインデント */
+      position: relative;
+      left: -15px; /* ネガティブインデント */
     }
   }
 
@@ -44,19 +49,16 @@
 
     &::before {
       height: auto;
-      bottom: calc(0.5lh - 6px);
+      bottom: calc(0.5lh - var(--tl-blob-radius));
     }
   }
 }
 
 @media (width >=768px) {
   .timeline {
-    &::before {
-      left: calc(150px - 1px);
-    }
+    margin-left: var(--tl-left-area);
 
     li {
-      margin-left: 150px;
       margin-block: 2em;
     }
 
@@ -64,11 +66,10 @@
       box-sizing: border-box;
       position: absolute;
       top: 0;
-      left: -150px;
-      width: 150px;
-      padding-right: 30px;
+      left: calc(var(--tl-left-area) * -1);
+      width: var(--tl-left-area);
+      padding-right: var(--tl-gap);
       text-align: right;
-      margin-left: 0; /* ネガティブインデントをキャンセル */
     }
   }
 }
