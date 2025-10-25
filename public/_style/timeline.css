@@ -43,7 +43,8 @@
     padding-block: 2em;
 
     &::before {
-      height: calc(100% - 0.5lh);
+      height: auto;
+      bottom: calc(0.5lh - 6px);
     }
   }
 }
