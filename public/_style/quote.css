@@ -1,0 +1,28 @@
+#quote {
+  margin: 1.5lh 2ic;
+  position: relative;
+
+  blockquote {
+    margin: 0;
+    font-style: italic;
+  }
+  
+  .quote-cite {
+    text-align: right;
+    font-size: 0.9em;
+    margin-top: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-left: 4px solid var(--text-color);
+    border-top: 4px solid var(--text-color);
+    opacity: 0.2;
+    top: -10px;
+    left: -15px;
+  }
+}
