@@ -1,0 +1,74 @@
+.timeline {
+  --tl-blob-radius: 6px;
+  --tl-left-area: 150px;
+  --tl-gap: 30px;
+
+  margin: 0 0 0 2ic;
+  padding: 0;
+  position: relative;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0.5lh;
+    bottom: 0.5lh;
+    width: 2px;
+    background-color: var(--accent-color);
+    opacity: 0.5;
+  }
+
+  li {
+    margin-left: 0;
+    margin-block: 1em;
+    padding-left: var(--tl-gap);
+    position: relative;
+
+    &::before {
+      content: "";
+      width: calc(var(--tl-blob-radius) * 2);
+      height: calc(var(--tl-blob-radius) * 2);
+      left: calc(var(--tl-blob-radius) * -1);
+      top: calc(0.5lh - var(--tl-blob-radius));
+      position: absolute;
+      border-radius: var(--tl-blob-radius);
+      background-color: var(--accent-color);
+    }
+
+    span {
+      display: block;
+      position: relative;
+      left: -15px; /* ネガティブインデント */
+    }
+  }
+
+  li.duration {
+    padding-block: 2em;
+
+    &::before {
+      height: auto;
+      bottom: calc(0.5lh - var(--tl-blob-radius));
+    }
+  }
+}
+
+@media (width >= 768px) {
+  .timeline {
+    margin-left: var(--tl-left-area);
+
+    li {
+      margin-block: 2em;
+    }
+
+    li span {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: calc(var(--tl-left-area) * -1);
+      width: var(--tl-left-area);
+      padding-right: var(--tl-gap);
+      text-align: right;
+    }
+  }
+}
