@@ -10,6 +10,20 @@ async function loadCoastline() {
   return response.text();
 }
 
+/** 
+ * "points"属性の文字列をパース
+ * @param {string} pointsText "x1,y1 x2,y2 ..." 形式の文字列(空白またはカンマ区切り)
+ * @returns {[number, number][]} [[x1, y1], [x2, y2], ...] 形式の配列
+ */
+function parsePointsString(pointsText) {
+  const numbers = pointsText.trim().split(/[\s,]/).map(Number);
+  const pairs = [];
+  for (let i = 0; i < numbers.length - 1; i += 2) {
+    pairs.push([numbers[i], numbers[i + 1]]);
+  }
+  return pairs;
+}
+
 /**
  * SVGを折れ線群に変換
  * @param {string} svgText
@@ -20,18 +34,13 @@ function parseSVGtoPolyline(svgText) {
   const polyline = [];
 
   doc.querySelectorAll("polygon, polyline").forEach(el => {
-    const points = el.getAttribute("points").trim().split(/[\s,]+/).map(Number);
+    const points = parsePointsString(el.getAttribute("points"));
+    
+    if (el.tagName.toLowerCase() === "polygon") points.push(points[0]); // 最後に最初の点を追加して閉じる
 
-    for (let i = 0; i < points.length - 2; i += 2) {
-      const x1 = points[i], y1 = points[i + 1];
-      const x2 = points[i + 2], y2 = points[i + 3];
-      polyline.push({ x1, y1, x2, y2, length: Math.hypot(x2 - x1, y2 - y1) });
-    }
-
-    // 閉じる線分を追加
-    if (el.tagName.toLowerCase() === "polygon") {
-      const x1 = points[points.length - 2], y1 = points[points.length - 1];
-      const x2 = points[0], y2 = points[1];
+    for (let i = 0; i < points.length - 1; i++) {
+      const [x1, y1] = points[i];
+      const [x2, y2] = points[i + 1];
       polyline.push({ x1, y1, x2, y2, length: Math.hypot(x2 - x1, y2 - y1) });
     }
   });
@@ -66,7 +75,7 @@ function randomOnPolyline(polyline) {
 function randomOnCircle(radius) {
   const r = Math.sqrt(Math.random()) * radius;
   const t = Math.random() * Math.PI * 2;
-  return { x:Math.cos(t) * r, y:Math.sin(t) * r };
+  return { x: Math.cos(t) * r, y: Math.sin(t) * r };
 }
 
 /**
