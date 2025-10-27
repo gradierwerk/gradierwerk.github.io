@@ -10,14 +10,18 @@ async function loadCoastline() {
   return response.text();
 }
 
-/**
+/** 
  * "points"属性の文字列をパース
- * @param {string} pointsText "x1,y1 x2,y2 ..." 形式の文字列
+ * @param {string} pointsText "x1,y1 x2,y2 ..." 形式の文字列(空白またはカンマ区切り)
  * @returns {[number, number][]} [[x1, y1], [x2, y2], ...] 形式の配列
  */
 function parsePointsString(pointsText) {
-  // 正規表現でカンマ区切りの構造を検索し、それぞれをカンマで分割し、それぞれを数値に変換する
-  return pointsText.match(/[^\s,]+\s*,\s*[^\s,]+/g).map(match => match.split(",").map(Number));
+  const numbers = pointsText.trim().split(/[\s,]/).map(Number);
+  const pairs = [];
+  for (let i = 0; i < numbers.length - 1; i += 2) {
+    pairs.push([numbers[i], numbers[i + 1]]);
+  }
+  return pairs;
 }
 
 /**
