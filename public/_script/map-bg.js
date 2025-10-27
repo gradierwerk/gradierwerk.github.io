@@ -76,7 +76,7 @@ function randomOnPolyline(polyline) {
 function randomOnCircle(radius) {
   const r = Math.sqrt(Math.random()) * radius;
   const t = Math.random() * Math.PI * 2;
-  return { x:Math.cos(t) * r, y:Math.sin(t) * r };
+  return { x: Math.cos(t) * r, y: Math.sin(t) * r };
 }
 
 /**
