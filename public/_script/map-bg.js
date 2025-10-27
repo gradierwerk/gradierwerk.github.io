@@ -11,6 +11,16 @@ async function loadCoastline() {
 }
 
 /**
+ * "points"属性の文字列をパース
+ * @param {string} pointsText "x1,y1 x2,y2 ..." 形式の文字列
+ * @returns {[number, number][]} [[x1, y1], [x2, y2], ...] 形式の配列
+ */
+function parsePointsString(pointsText) {
+  // 正規表現でカンマ区切りの構造を検索し、それぞれをカンマで分割し、それぞれを数値に変換する
+  return pointsText.match(/[^\s,]+\s*,\s*[^\s,]+/g).map(match => match.split(",").map(Number));
+}
+
+/**
  * SVGを折れ線群に変換
  * @param {string} svgText
  * @returns {{x1: number, y1: number, x2: number, y2: number, length: number}[]}
@@ -20,18 +30,18 @@ function parseSVGtoPolyline(svgText) {
   const polyline = [];
 
   doc.querySelectorAll("polygon, polyline").forEach(el => {
-    const points = el.getAttribute("points").trim().split(/[\s,]+/).map(Number);
+    const points = parsePointsString(el.getAttribute("points"));
 
-    for (let i = 0; i < points.length - 2; i += 2) {
-      const x1 = points[i], y1 = points[i + 1];
-      const x2 = points[i + 2], y2 = points[i + 3];
+    for (let i = 0; i < points.length - 1; i++) {
+      const [x1, y1] = points[i];
+      const [x2, y2] = points[i + 1];
       polyline.push({ x1, y1, x2, y2, length: Math.hypot(x2 - x1, y2 - y1) });
     }
 
     // 閉じる線分を追加
     if (el.tagName.toLowerCase() === "polygon") {
-      const x1 = points[points.length - 2], y1 = points[points.length - 1];
-      const x2 = points[0], y2 = points[1];
+      const [x1, y1] = points[points.length - 1];
+      const [x2, y2] = points[0];
       polyline.push({ x1, y1, x2, y2, length: Math.hypot(x2 - x1, y2 - y1) });
     }
   });
