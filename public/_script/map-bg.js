@@ -35,17 +35,12 @@ function parseSVGtoPolyline(svgText) {
 
   doc.querySelectorAll("polygon, polyline").forEach(el => {
     const points = parsePointsString(el.getAttribute("points"));
+    
+    if (el.tagName.toLowerCase() === "polygon") points.push(points[0]); // 最後に最初の点を追加して閉じる
 
     for (let i = 0; i < points.length - 1; i++) {
       const [x1, y1] = points[i];
       const [x2, y2] = points[i + 1];
-      polyline.push({ x1, y1, x2, y2, length: Math.hypot(x2 - x1, y2 - y1) });
-    }
-
-    // 閉じる線分を追加
-    if (el.tagName.toLowerCase() === "polygon") {
-      const [x1, y1] = points[points.length - 1];
-      const [x2, y2] = points[0];
       polyline.push({ x1, y1, x2, y2, length: Math.hypot(x2 - x1, y2 - y1) });
     }
   });
